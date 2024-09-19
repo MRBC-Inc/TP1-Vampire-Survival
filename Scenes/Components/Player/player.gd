@@ -9,7 +9,7 @@ var rolling = false
 
 func _physics_process(delta):
 	var directionH = Input.get_axis("move_left", "move_right")
-	var directionV = Input.get_axis("move_down", "move_up")
+	var directionV = Input.get_axis("move_up", "move_down")
 	
 	if directionH > 0:
 		animated_sprite.flip_h = false
