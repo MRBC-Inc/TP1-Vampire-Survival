@@ -2147,7 +2147,7 @@ sources/2 = SubResource("TileSetAtlasSource_1gfmq")
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hnq8"]
 height = 40.0
 
-[node name="World" type="Node2D"]
+[node name="World2" type="Node2D"]
 script = ExtResource("1_58jle")
 
 [node name="TileMap" type="TileMap" parent="."]
