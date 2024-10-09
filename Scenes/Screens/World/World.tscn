@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2pgs4mcd18gm"]
+[gd_scene load_steps=12 format=3 uid="uid://c2pgs4mcd18gm"]
 
 [ext_resource type="Texture2D" uid="uid://doujbmjj5odt3" path="res://Asset/sprites/world_tileset.png" id="1_0rgt2"]
 [ext_resource type="Script" path="res://Scenes/Screens/World/World.cs" id="1_58jle"]
 [ext_resource type="Texture2D" uid="uid://ddmow8wate6vd" path="res://Asset/sprites/Forest Tileset.png" id="2_hw0l4"]
 [ext_resource type="PackedScene" uid="uid://dum5t4cru5yjx" path="res://Scenes/Components/Player/Player.tscn" id="2_ll0np"]
 [ext_resource type="Texture2D" uid="uid://d3mmd732ju6kr" path="res://Asset/sprites/1_Terrains_and_Fences_16x16.png" id="3_jspe8"]
+[ext_resource type="PackedScene" uid="uid://cyo2alglihyjv" path="res://Scenes/Components/Collectables/coin.tscn" id="6_xtfli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ruxw6"]
 texture = ExtResource("1_0rgt2")
@@ -2169,5 +2170,14 @@ position = Vector2(702, 193)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_1hnq8")
+
+[node name="Coin" parent="." instance=ExtResource("6_xtfli")]
+position = Vector2(235, 135)
+
+[node name="Coin2" parent="." instance=ExtResource("6_xtfli")]
+position = Vector2(208, 177)
+
+[node name="Coin3" parent="." instance=ExtResource("6_xtfli")]
+position = Vector2(265, 79)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

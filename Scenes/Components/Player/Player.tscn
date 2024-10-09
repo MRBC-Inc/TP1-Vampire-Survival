@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://dum5t4cru5yjx"]
 
 [ext_resource type="Texture2D" uid="uid://r4ph6k6ja5jx" path="res://Asset/sprites/knight.png" id="1_78j1s"]
-[ext_resource type="Script" path="res://Scenes/Components/Player/player.gd" id="1_uuwat"]
+[ext_resource type="Script" path="res://Scenes/Components/Player/Player.cs" id="1_x3qlo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4nny"]
 radius = 6.0
@@ -222,7 +222,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_uuwat")
+script = ExtResource("1_x3qlo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -233,5 +233,11 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_yj8os")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 14.0
+offset_right = 21.0
+offset_bottom = 37.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

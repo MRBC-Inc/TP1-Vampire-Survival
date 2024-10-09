@@ -7,5 +7,6 @@ public partial class World : Node2D {
 		GD.Print("World1 : detect body");
 		PackedScene nextLevel = Manager.Get().GetLevelManager().LoadLevel("res://Scenes/Screens/World2/World2.tscn");
 		GetTree().ChangeSceneToPacked(nextLevel);
+		
 	}
 }
