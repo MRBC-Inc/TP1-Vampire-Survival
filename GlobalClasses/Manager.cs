@@ -14,7 +14,6 @@ public partial class Manager : SceneTree
 		managerInstance = this;
 		levelManager = new LevelManager();
 		saveManager = new SaveManager();
-		GD.Print("NOTRE MANAGER is ready!");
 	}
 
 	public static Manager Get(){

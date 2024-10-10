@@ -10,7 +10,6 @@ const SAVE_FILENAME = "PlayerSave"
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
-	$Label.text = str(coins)
 	var directionH = Input.get_axis("move_left", "move_right")
 	var directionV = Input.get_axis("move_up", "move_down")
 	
@@ -41,18 +40,7 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("roll"):
 		animated_sprite.play("roll")
 		rolling = true
-	
-func _ready() -> void:
-	Manager.Get().GetSaveManager().LoadGame(SAVE_FILENAME)
-	
-func _exit_tree() -> void:
-	Manager.Get().GetSaveManager().SaveGame(SAVE_FILENAME)
-	
-func collectCoin() -> void:
-	coins += 1
 
-
-	
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite.animation == "roll":
 		rolling = false
