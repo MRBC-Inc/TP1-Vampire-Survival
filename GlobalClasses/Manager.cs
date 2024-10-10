@@ -1,12 +1,12 @@
 using Godot;
 using static LevelManager;
 using static SaveManager;
-
 [GlobalClass]
 public partial class Manager : SceneTree
 {
 	private LevelManager levelManager;
 	private SaveManager saveManager;
+	private Node player;
 
 	private static Manager managerInstance;
 
@@ -28,5 +28,12 @@ public partial class Manager : SceneTree
 	}
 	public SaveManager GetSaveManager(){
 		return saveManager;
+	}
+	
+	public void SetPlayer(Node pl) {
+		player = pl;
+	}
+	public Node GetPlayer() {
+		return player;
 	}
 }

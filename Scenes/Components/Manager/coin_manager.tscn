@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bvmngt238ft4c"]
 
-[ext_resource type="Script" path="res://Scenes/Components/Manager/CoinManager.cs" id="1_v67dl"]
+[ext_resource type="Script" path="res://GlobalClasses/CoinManager.cs" id="1_v67dl"]
 
 [node name="CoinManager" type="Node"]
 script = ExtResource("1_v67dl")

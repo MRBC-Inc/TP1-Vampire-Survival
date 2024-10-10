@@ -2,7 +2,7 @@ using Godot;
 using System;
 using static Manager;
 
-public partial class World : Node2D {
+public partial class World : Node2D {	
 	public void _on_area_2d_body_entered(Node body) {
 		if (body.IsInGroup("Player")){
 			GD.Print("World1 : detect body");

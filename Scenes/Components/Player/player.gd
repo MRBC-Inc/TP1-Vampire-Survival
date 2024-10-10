@@ -1,6 +1,7 @@
 extends CharacterBody2D
-
+class_name Player
 const SPEED = 130.0
+
 
 var rolling = false
 
@@ -9,7 +10,12 @@ const SAVE_FILENAME = "PlayerSave"
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+func _ready() -> void:
+	Manager.Get().SetPlayer(self)
+	coins = Manager.Get().GetSaveManager().LoadCoins("game")
+
 func _physics_process(delta):
+	$CoinLabel.text = str(coins)
 	var directionH = Input.get_axis("move_left", "move_right")
 	var directionV = Input.get_axis("move_up", "move_down")
 	
@@ -44,3 +50,18 @@ func _input(event: InputEvent) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite.animation == "roll":
 		rolling = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	if body.is_in_group("Persist"):
+		body.Collect()
+		coins += 1
+		Manager.Get().GetSaveManager().SaveGame("game")
+		
+func get_coins():
+	return coins
+
+func SetCoins(nbr):
+	coins = nbr
+	

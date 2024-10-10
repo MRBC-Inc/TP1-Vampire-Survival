@@ -2165,12 +2165,6 @@ position = Vector2(179, 117)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.5, 2.5)
 
-[node name="CoinLabel" type="Label" parent="Player/Camera2D"]
-offset_left = -7.0
-offset_top = 14.0
-offset_right = 33.0
-offset_bottom = 37.0
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(702, 193)
 
