@@ -20,6 +20,12 @@ config/icon="res://icon.svg"
 
 project/assembly_name="TP1-Vampire-Survival"
 
+[global_group]
+
+Objects=""
+Persist=""
+Player=""
+
 [input]
 
 move_right={
