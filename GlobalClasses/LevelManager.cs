@@ -1,8 +1,12 @@
 using Godot;
 
 public partial class LevelManager : Node {
-	public PackedScene LoadLevel(string scenePath){
-		GD.Print("ON LOAD LE LEVEL " + scenePath);
-		return ResourceLoader.Load<PackedScene>(scenePath);
+	private string ComputeLevelPath(string levelName) {
+		return "res://Scenes/Screens/" + levelName + "/" + levelName + ".tscn";
+	}
+	
+	public PackedScene LoadLevel(string sceneName){
+		GD.Print("ON LOAD LE LEVEL " + sceneName);
+		return ResourceLoader.Load<PackedScene>(ComputeLevelPath(sceneName));
 	}
 }

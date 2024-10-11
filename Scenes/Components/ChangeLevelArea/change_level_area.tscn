@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dov5hhfxgk423"]
+
+[ext_resource type="Script" path="res://Scenes/Components/ChangeLevelArea/ChangeLevelArea.cs" id="1_52mp5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4jve4"]
+radius = 7.0
+height = 38.0
+
+[node name="ChangeLevelArea" type="Area2D"]
+script = ExtResource("1_52mp5")
+metadata/NextLevelName = &"World"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4jve4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
