@@ -2251,12 +2251,18 @@ zoom = Vector2(2.5, 2.5)
 position = Vector2(235, 135)
 
 [node name="Coin2" parent="." instance=ExtResource("6_xtfli")]
-position = Vector2(208, 177)
+position = Vector2(483, 194)
 
 [node name="Coin3" parent="." instance=ExtResource("6_xtfli")]
-position = Vector2(265, 79)
+position = Vector2(345, 164)
+
+[node name="Coin4" parent="." instance=ExtResource("6_xtfli")]
+position = Vector2(602, 233)
 
 [node name="ChangeLevelArea" parent="." instance=ExtResource("7_d5jbk")]
 position = Vector2(708, 193)
 metadata/NextLevelName = &"World2"
 metadata/RotationDegrees = 90.0
+
+[node name="Coin5" parent="." instance=ExtResource("6_xtfli")]
+position = Vector2(688, 196)
