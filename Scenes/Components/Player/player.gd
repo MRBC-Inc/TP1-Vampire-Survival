@@ -12,7 +12,7 @@ const SAVE_FILENAME = "PlayerSave"
 
 func _ready() -> void:
 	Manager.Get().SetPlayer(self)
-	coins = Manager.Get().GetSaveManager().LoadCoins("game")
+	coins = Manager.Get().GetSaveManager().LoadGame("game")
 
 func _physics_process(delta):
 	$CoinLabel.text = str(coins)
